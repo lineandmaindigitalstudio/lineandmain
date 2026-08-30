@@ -1,4 +1,4 @@
-# Line & Main Digital Studio — Version 2.2
+# Line & Main Digital Studio — Version 2.3
 
 This is the GitHub-ready version of the Line & Main website.
 
@@ -22,7 +22,9 @@ Do **not** upload the ZIP itself into the repository; unzip it first and upload 
 ## Before public launch
 The contact email in `index.html` is still `hello@lineandmain.ca` as a placeholder. Replace it with the final Line & Main email before launch.
 
-## V2.2 refinements
-- Replaced the first sage LINE/MAIN graphic with a cleaner charcoal architectural brand panel.
-- Removed the awkward L/M treatment from the hero graphic.
-- Rebuilt the logo asset as a tightly cropped image so the header and footer no longer show the oversized white box/cut-off logo.
+
+## V2.3 changes
+- Restored the original business-flow hero graphic and removed the replacement framed panel.
+- Removed all L/M and LINE / MAIN treatments.
+- Brand references now use LINE & MAIN.
+- Rebuilt the logo asset with a transparent background for cleaner header/footer placement.
