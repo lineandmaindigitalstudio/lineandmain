@@ -1,31 +1,25 @@
-# Line & Main Digital Studio — Version 2.3
+# Line & Main Digital Studio — Version 6
 
-This is the GitHub-ready version of the Line & Main website.
+V6 keeps the broader digital-studio positioning and replaces the V4 About-section
+systems diagram with a cleaner card-based workflow.
 
-## What changed from V2
-- Integrated the actual Line & Main Digital Studio logo.
-- Kept the broader digital-studio positioning rather than presenting Line & Main as a website-only company.
-- Retained the sage / ivory / charcoal brand direction.
-- Websites remain one capability within Digital Presence, alongside business systems, AI, automation and organization.
+## V6 changes
+- Rebuilt the About visual as Capture → Organize → Automate → Follow through.
+- Removed the abstract curved-line systems graphic.
+- Replaced “Start a conversation”:
+  - navigation: “Get started”
+  - hero/About CTA: “Tell us what needs fixing”
+- Keeps the actual transparent LINE & MAIN logo.
+- Includes the full deployable static-site file set.
 
 ## Upload to GitHub
-Upload these files to the root of the `lineandmain` repository:
-- `index.html`
-- `styles.css`
-- `script.js`
-- `favicon.svg`
-- `line-and-main-logo.png`
-- `README.md`
+Upload the files inside this folder to the root of the `lineandmain` repository,
+replacing files with the same names. Do not upload the ZIP itself.
 
-Do **not** upload the ZIP itself into the repository; unzip it first and upload the files inside.
+Cloudflare should automatically build and deploy after the GitHub commit.
 
 ## Before public launch
-The contact email in `index.html` is still `hello@lineandmain.ca` as a placeholder. Replace it with the final Line & Main email before launch.
-deployment test
+The email `hello@lineandmain.ca` is still a placeholder and should be replaced
+with the final Line & Main email.
 
-
-## V2.3 changes
-- Restored the original business-flow hero graphic and removed the replacement framed panel.
-- Removed all L/M and LINE / MAIN treatments.
-- Brand references now use LINE & MAIN.
-- Rebuilt the logo asset with a transparent background for cleaner header/footer placement.
+V6 replaces the About-section left-side workflow cards with a distinct systems console visual.
