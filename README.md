@@ -21,6 +21,7 @@ Do **not** upload the ZIP itself into the repository; unzip it first and upload 
 
 ## Before public launch
 The contact email in `index.html` is still `hello@lineandmain.ca` as a placeholder. Replace it with the final Line & Main email before launch.
+deployment test
 
 
 ## V2.3 changes
