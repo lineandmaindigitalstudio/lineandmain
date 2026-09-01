@@ -36,3 +36,82 @@ if ('IntersectionObserver' in window) {
 
 const year = document.querySelector('#year');
 if (year) year.textContent = new Date().getFullYear();
+
+// V10 — Forminit direct website submission.
+// After creating the form in Forminit, paste the Form ID below.
+const FORMINIT_FORM_ID = "7jvztymn3tx";
+
+const inquiryForm = document.getElementById("inquiry-form");
+const formStatus = document.getElementById("form-status");
+
+if (inquiryForm) {
+  inquiryForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const submitButton = inquiryForm.querySelector('button[type="submit"]');
+    const originalButtonText = submitButton.textContent;
+
+    if (
+      !FORMINIT_FORM_ID ||
+      FORMINIT_FORM_ID === "7jvztymn3tx"
+    ) {
+      formStatus.textContent = "Form setup is not complete yet.";
+      formStatus.classList.remove("success");
+      formStatus.classList.add("error");
+      return;
+    }
+
+    submitButton.disabled = true;
+    submitButton.textContent = "Sending…";
+    formStatus.textContent = "Sending…";
+    formStatus.classList.remove("success", "error");
+
+    const sourceData = new FormData(inquiryForm);
+    const helpChoices = Array.from(
+      inquiryForm.querySelectorAll('input[name="help-choice"]:checked')
+    ).map((input) => input.value);
+
+    const formData = new FormData();
+    formData.append(
+      "fi-sender-fullName",
+      sourceData.get("fi-sender-fullName") || ""
+    );
+    formData.append(
+      "fi-sender-email",
+      sourceData.get("fi-sender-email") || ""
+    );
+    formData.append(
+      "fi-text-business-name",
+      sourceData.get("fi-text-business-name") || "Not provided"
+    );
+    formData.append(
+      "fi-text-looking-for-help-with",
+      helpChoices.length ? helpChoices.join(", ") : "Not specified"
+    );
+    formData.append(
+      "fi-text-what-could-be-working-better",
+      sourceData.get("fi-text-what-could-be-working-better") || ""
+    );
+
+    try {
+      const forminit = new Forminit();
+      const { error } = await forminit.submit(FORMINIT_FORM_ID, formData);
+
+      if (error) {
+        throw new Error(error.message || "Something went wrong.");
+      }
+
+      inquiryForm.reset();
+      formStatus.textContent =
+        "Thanks — your message is on its way. We’ll be in touch soon.";
+      formStatus.classList.add("success");
+    } catch (error) {
+      formStatus.textContent =
+        "That didn’t send. Please try again or email hello@lineandmain.ca.";
+      formStatus.classList.add("error");
+    } finally {
+      submitButton.disabled = false;
+      submitButton.textContent = originalButtonText;
+    }
+  });
+}

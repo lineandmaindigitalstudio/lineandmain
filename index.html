@@ -40,7 +40,7 @@
       <div class="container hero-grid">
         <div class="hero-copy reveal">
           <p class="eyebrow">Digital systems for small business</p>
-          <h1>Your business works. Let’s make everything behind it work better.</h1>
+          <h1>Your business works. Let’s make running it easier.</h1>
           <p class="hero-text">
             Line & Main Digital Studio helps small businesses simplify the way they work, sharpen the way they show up online,
             and use smarter tools to save time, reduce friction, and create a more professional customer experience.
@@ -288,16 +288,35 @@
       </div>
     </section>
 
-    <section class="cta-section" id="contact">
-      <div class="container cta-inner reveal">
-        <p class="eyebrow cta-eyebrow">Have something that feels more complicated than it should?</p>
-        <h2>Show us the mess. We’ll help you make sense of it.</h2>
-        <p>
-          Tell us a little about your business, what is not working smoothly, and what you would love to make easier.
-        </p>
-        <a class="button button-light" href="mailto:hello@lineandmain.ca?subject=Line%20%26%20Main%20Inquiry">hello@lineandmain.ca</a>
+    <section class="inquiry-section" id="contact">
+  <div class="container inquiry-grid">
+    <div class="inquiry-intro">
+      <p class="eyebrow">Start here</p>
+      <h2>Tell us what needs fixing.</h2>
+      <p>Tell us a little about your business, what isn’t working smoothly, and what you would love to make easier.</p>
+      <div class="inquiry-email"><span>Prefer email?</span><a href="mailto:hello@lineandmain.ca">hello@lineandmain.ca</a></div>
+    </div>
+    <form class="inquiry-form" id="inquiry-form">
+      <div class="form-row">
+        <label><span>Name</span><input type="text" name="fi-sender-fullName" autocomplete="name" required></label>
+        <label><span>Business name</span><input type="text" name="fi-text-business-name" autocomplete="organization"></label>
       </div>
-    </section>
+      <label><span>Email</span><input type="email" name="fi-sender-email" autocomplete="email" required></label>
+      <fieldset><legend>What are you looking for help with?</legend>
+        <div class="choice-grid">
+          <label><input type="checkbox" name="help-choice" value="Business Systems"><span>Business Systems</span></label>
+          <label><input type="checkbox" name="help-choice" value="AI & Automation"><span>AI & Automation</span></label>
+          <label><input type="checkbox" name="help-choice" value="Digital Presence"><span>Digital Presence</span></label>
+          <label><input type="checkbox" name="help-choice" value="Business Organization"><span>Business Organization</span></label>
+          <label><input type="checkbox" name="help-choice" value="Not sure yet"><span>Not sure yet</span></label>
+        </div>
+      </fieldset>
+      <label><span>What could be working better?</span><textarea name="fi-text-what-could-be-working-better" rows="6" required placeholder="A few details are plenty."></textarea></label>
+      <button class="button button-dark form-submit" type="submit">Tell us what needs fixing</button>
+      <p class="form-note form-status" id="form-status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
   </main>
 
   <footer class="site-footer">
@@ -310,6 +329,7 @@
     </div>
   </footer>
 
+  <script src="https://forminit.com/sdk/v1/forminit.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

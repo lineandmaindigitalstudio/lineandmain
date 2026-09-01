@@ -681,3 +681,47 @@ h3 { margin-top:0; font-size:21px; line-height:1.2; }
     gap: 24px;
   }
 }
+
+/* V9 INQUIRY FORM */
+.inquiry-section{background:#8E9B83;padding:110px 0}
+.inquiry-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:88px;align-items:start}
+.inquiry-intro{position:sticky;top:120px}
+.inquiry-intro h2{margin:16px 0 24px;max-width:500px;font-family:"Playfair Display",Georgia,serif;font-size:clamp(48px,5vw,76px);font-weight:600;line-height:.98;letter-spacing:-.04em}
+.inquiry-intro>p:not(.eyebrow){max-width:500px;font-size:18px;line-height:1.65}
+.inquiry-email{margin-top:38px;padding-top:22px;border-top:1px solid rgba(23,25,22,.25);display:flex;flex-direction:column;gap:6px}
+.inquiry-email span{font-size:12px;text-transform:uppercase;letter-spacing:.12em}
+.inquiry-email a{color:inherit;font-size:18px;text-underline-offset:4px}
+.inquiry-form{background:#F7F5EF;padding:44px;border:1px solid rgba(23,25,22,.14)}
+.inquiry-form label>span,.inquiry-form legend{display:block;margin-bottom:9px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.inquiry-form>label,.inquiry-form fieldset{display:block;margin-bottom:26px}
+.inquiry-form input[type=text],.inquiry-form input[type=email],.inquiry-form textarea{width:100%;box-sizing:border-box;border:1px solid #c9c6bd;background:#fff;color:#171916;font:inherit;padding:15px 16px;border-radius:0;outline:none}
+.inquiry-form textarea{resize:vertical;min-height:150px}
+.inquiry-form input:focus,.inquiry-form textarea:focus{border-color:#68735F;box-shadow:0 0 0 2px rgba(104,115,95,.12)}
+.inquiry-form fieldset{border:0;padding:0;margin-left:0;margin-right:0}
+.choice-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.choice-grid label{position:relative;cursor:pointer}.choice-grid input{position:absolute;opacity:0;pointer-events:none}
+.choice-grid label span{display:block;margin:0;padding:13px 14px;border:1px solid #c9c6bd;background:#fff;font-size:13px;font-weight:500;text-transform:none;letter-spacing:0}
+.choice-grid input:checked+span{background:#30352F;border-color:#30352F;color:#F7F5EF}
+.form-submit{width:100%;cursor:pointer}.form-note{margin:12px 0 0;color:#686a64;font-size:12px;line-height:1.5;text-align:center}
+@media(max-width:900px){.inquiry-grid{grid-template-columns:1fr;gap:48px}.inquiry-intro{position:static}}
+@media(max-width:620px){.inquiry-section{padding:76px 0}.inquiry-form{padding:26px 20px}.form-row,.choice-grid{grid-template-columns:1fr}}
+
+
+/* V10 FORMINIT STATUS STATES */
+.form-submit:disabled {
+  opacity: .65;
+  cursor: wait;
+}
+
+.form-status {
+  min-height: 20px;
+}
+
+.form-status.success {
+  color: #506048;
+}
+
+.form-status.error {
+  color: #8a3e35;
+}
