@@ -549,3 +549,92 @@ h3 { margin-top:0; font-size:21px; line-height:1.2; }
   .output-grid { grid-template-columns:1fr 1fr; }
   .output-grid article { min-height:100px; }
 }
+
+
+/* V7 POLISH */
+.systems-console {
+  padding: 42px;
+}
+
+.console-top {
+  padding-bottom: 20px;
+}
+
+.input-row {
+  width: 88%;
+  margin: 32px auto 22px;
+  gap: 10px;
+}
+
+.input-row span {
+  padding: 9px 7px;
+  background: rgba(247,245,239,.18);
+  border-color: rgba(23,25,22,.16);
+  font-size: 10px;
+}
+
+.system-core {
+  width: 82%;
+  padding: 38px 34px 36px;
+}
+
+.system-core strong {
+  max-width: 390px;
+  font-size: 38px;
+}
+
+.system-core p {
+  max-width: 400px;
+  margin-top: 16px;
+  font-size: 13px;
+}
+
+.flow-rail {
+  width: 66%;
+  height: 48px;
+}
+
+.output-grid {
+  width: 92%;
+  margin: 18px auto 0;
+  gap: 8px;
+}
+
+.output-grid article {
+  min-height: 112px;
+  padding: 15px 13px;
+}
+
+.console-footer {
+  margin-top: 27px;
+  opacity: .82;
+}
+
+.about-copy h2 {
+  max-width: 620px;
+}
+
+.about-copy p:not(.eyebrow) {
+  max-width: 590px;
+  line-height: 1.72;
+}
+
+.about-copy .button-about {
+  margin-top: 24px;
+}
+
+.cta-inner {
+  max-width: 800px;
+}
+
+.site-footer {
+  padding: 38px 0;
+}
+
+@media (max-width:620px) {
+  .systems-console { padding:28px 20px; }
+  .input-row { width:100%; }
+  .system-core { width:100%; padding:28px 22px; }
+  .system-core strong { font-size:31px; }
+  .output-grid { width:100%; }
+}

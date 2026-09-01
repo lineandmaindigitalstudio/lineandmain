@@ -1,9 +1,9 @@
-# Line & Main Digital Studio — Version 6
+# Line & Main Digital Studio — Version 7
 
-V6 keeps the broader digital-studio positioning and replaces the V4 About-section
+V7 keeps the broader digital-studio positioning and replaces the V4 About-section
 systems diagram with a cleaner card-based workflow.
 
-## V6 changes
+## V7 changes
 - Rebuilt the About visual as Capture → Organize → Automate → Follow through.
 - Removed the abstract curved-line systems graphic.
 - Replaced “Start a conversation”:
@@ -22,4 +22,6 @@ Cloudflare should automatically build and deploy after the GitHub commit.
 The email `hello@lineandmain.ca` is still a placeholder and should be replaced
 with the final Line & Main email.
 
-V6 replaces the About-section left-side workflow cards with a distinct systems console visual.
+V7 replaces the About-section left-side workflow cards with a distinct systems console visual.
+
+V7 is a visual polish pass: cleaner About hierarchy, reduced microcopy, improved spacing, and removal of the public placeholder email note.
