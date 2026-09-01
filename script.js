@@ -53,7 +53,7 @@ if (inquiryForm) {
 
     if (
       !FORMINIT_FORM_ID ||
-      FORMINIT_FORM_ID === "7jvztymn3tx"
+      FORMINIT_FORM_ID === "PASTE_YOUR_FORMINIT_FORM_ID_HERE"
     ) {
       formStatus.textContent = "Form setup is not complete yet.";
       formStatus.classList.remove("success");
